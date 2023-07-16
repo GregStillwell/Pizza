@@ -1,4 +1,6 @@
+//business logic
 window.onload = function() {
+
 
 }
 
@@ -9,4 +11,11 @@ this.size = pizzaSize
 
 const myPizza = new pizza(["Pepperoni","Sausage"],"medium");
 
+
+
+
+
+
+
+//ul logic
 

@@ -15,18 +15,20 @@ Greg Stillwell
 - clone this repository: `$ git clone \`
 - open `index.html` in a web browser.
 - right click and click on 'open with live server'
-- type a number and see your results
+- make your pizza
 
 ### Known Bugs
 - None at this time.
 
 ### Test:
 
-Describe: Describe: Pizza()
+Describe: Pizza()
 
 Test: "It should return a Pizza object with two properties for toppings and size"
 Code: const myPizza = new Pizza(["Sausage",pepperoni"], "medium");
 Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
+
+Test:
 
 ### License
 
