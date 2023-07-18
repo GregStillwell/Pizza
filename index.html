@@ -10,27 +10,38 @@
 <body>
   <form id="pizzatoppings">
     <h1>Meats</h1>
-        <input type="radio" name="toppings" value="Pepperoni" checked>
-        Pepperoni
-      </label><br/>
-      <label>
-        <input type="radio" name="toppings" value="Sausage">
-        Sausage
-      </label><br/>
-      <label>
-        <input type="radio" name="toppings" value="Ham">
-        Ham
-      </label><br/>
-      <input type="radio" name="toppings" value="bacon" checked>
-      Bacon
-    </label><br/>
-    <label>
-      <input type="radio" name="toppings" value="chicken">
-      Chicken
-    </label><br/>
-      <br/>
-      <button type="submit">Done</button>
-  </form>
+
+    <input type="checkbox" id="Pepperoni" name="toppings" value="Pepperoni">
+    <label for="Pepperoni">Pepperoni</label>
+    
+    <br>
   
+    <input type="checkbox" id="Sausage" name="toppings" value="Sausage">
+    <label for="Sausage">Sausage</label>
+    
+    <br>
+  
+    <input type="checkbox" id="Ham" name="toppings" value="Ham">
+    <label for="Ham"> Ham</label>
+    <br>
+
+    <input type="checkbox" id="Bacon" name="toppings" value="Bacon">
+    <label for="Bacon">Bacon</label>
+    <br>
+
+    <input type="checkbox" id="Chicken" name="toppings" value="Chicken">
+    <label for="Chicken">Chicken</label>
+
+    <br>
+
+    <h2>Sizes</h2>
+
+
+
+    <button type="submit">Done</button>
+  </form>
+
+  <p id="pizzaOutput"></p>
+  </html>
 </body>
 </html>
