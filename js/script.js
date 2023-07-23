@@ -1,39 +1,41 @@
 //business logic
-function pizza(pizzaToppings, pizzaSize) {
-  this.toppings = pizzaToppings;
-  this.size = pizzaSize;
-  this.price = 0
-  this.pizzatoppings = ["Pepperoni", "Sausage", "Ham", "Bacon", "Chicken"];
-  this.pizzaSize = ["small", "medium", "large"];
-  
+function pizza(toppings, size) {
+  this.toppings = toppings
+  this.size = size
+  this.price = 0 // this.pizzatop = ["Pepperoni", "Sausage", "Ham", "Bacon", "Chicken"];
+ // this.pizzaSiz= ["small", "medium", "large"];
+ console.log(toppings)
 }
-const toppings = document.getElementsByName("toppings")
-const pizzaSize = document.getElementsByName("sizes")
+//const toppings = document.getElementsByName("toppings").value
+//const pizzaSize = document.getElementsByName("sizes").value
 
 pizza.prototype.getPrice = function () {
-  let price= 0
-  pizzaSize.forEach(pizzaSize => {
+
     if (this.size ==="small") {
-      price += 10;
+      price += 15;
     }
     else if (this.size ==="medium") {
-      price += 14;
+      price += 18;
     }
     else if (this.size ==="large") {
-      price += 18;
-      return(pizzaSize)
-    }
-    console.log(pizza())
-  })
+     price += 24;
+
+    this.price += this.toppings.length
+    
+    return this.price;
+    
+   };
+    
+  }
   
-}
+
 
 
 //for (let i = 0; i < toppings.length; i++){
-  //  if (toppings[i].checked === true) {
+  //if (toppings[i].checked === true) {
   //   selectedToppings.push(toppings[i].value);
   // }
-
+ // }
 
 
 
@@ -57,12 +59,12 @@ window.onload = function () {
 
 function handleFormSubmit(e) {
   e.preventDefault();
-  
+  let newPizza = new pizza(toppingSelection, sizeSelection)
   let selectedToppings = [];
 
   // look at form see which checkboxes are checked
   const toppings = document.getElementsByName("toppings") //array of the HTML elements that have the name toppping
-  const size = document.getElementsByTagName("Option")
+  const size = document.getElementsByName("sizes")
   const userPizza = new pizza(toppings,size);
   userPizza.getPrice();
     
@@ -80,4 +82,4 @@ function handleFormSubmit(e) {
   
   //  const pizzaOutput = document.getElementById('pizzaOutput');
   //  pizzaOutput.innerText(`Your Pizza wil cost ${userPizza.price}. And has ${userPizza.toppings} for toppings`)
-  }
+ }
