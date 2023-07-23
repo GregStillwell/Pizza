@@ -9,19 +9,20 @@ function pizza(toppings, size) {
 pizza.prototype.getPrice = function () {
     if (this.size ==="small") {
       this.price += 15;
-    }
-    else if (this.size ==="medium") {
+    
+    } else if (this.size ==="medium") {
       this.price += 18;
     }
     else if (this.size ==="large") {
       this.price += 24;
 
     this.price += this.toppings.length;
-    
+    }; 
+    console.log(this.price)
     return this.price;
     
-   };
-   console.log(this.price) 
+   
+   
 }
   
 
@@ -52,18 +53,11 @@ function handleFormSubmit(e) {
   let newPizza = new pizza(toppingSelection, sizeSelection.value)
   newPizza.getPrice();
   
-  const toppings = document.getElementsByName("toppings") //array of the HTML elements that have the name toppping
-  const size = document.getElementsByName("sizes")
-  //const userPizza = new pizza(toppings,size);
+  //const toppings = document.getElementsByName("toppings") //array of the HTML elements that have the name toppping
+ // const size = document.getElementsByName("sizes")
+ // const userPizza = new pizza(toppings,size);
  // userPizza.getPrice();
     
- window.onload = function () {
-  const form = document.getElementById("pizzatoppings")
-  form.addEventListener("submit", handleFormSubmit)
-    // put those into a new array
-    //toppings.forEach(function ())
-
-
     //toppings.forEach((topping) => {
     // if (topping.checked === true) {
     //   selectedToppings.push(topping.value);
@@ -71,6 +65,10 @@ function handleFormSubmit(e) {
     // })
 
   
-  //  const pizzaOutput = document.getElementById('pizzaOutput');
-  //  pizzaOutput.innerText(`Your Pizza wil cost ${userPizza.price}. And has ${userPizza.toppings} for toppings`)
- }}
+      const pizzaOutput = document.getElementById("pizzaOutput");
+     pizzaOutput.innerText(`Your Pizza wil cost ${this.price}. And has ${toppingSelection} for toppings and the size`)
+    } 
+  window.onload = function () {
+    const form = document.getElementById("pizzatoppings")
+    form.addEventListener("submit", handleFormSubmit)
+}
