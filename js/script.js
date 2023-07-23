@@ -11,9 +11,19 @@ small:  {name: "small" ,Price: $10 },
 medium: {name: "medium" , price: $14},
 Large:  {name: "Large" , price: $18}
   }
+  let selectedToppings = [];
+
+  for (let i = 0; i < toppings.length; i++){
+    if (toppings[i].checked === true) {
+      selectedToppings.push(toppings[i].value);
+    }
+    
+  }
+  
   // based off of the the amount of toppings
   // added to the size price
   // this.price
+  
 }
 
 const myPizza = new pizza(['Pepperoni', 'Sausage'], 'medium');
@@ -31,21 +41,13 @@ function handleFormSubmit(e) {
   e.preventDefault();
 
 
-  let selectedToppings = [];
+  
   // look at form see which checkboxes are checked
   const toppings = document.getElementsByName("toppings") //array of the HTML elements that have the name toppping
   
 
   // put those into a new array
   //toppings.forEach(function ())
-  
-  for (let i = 0; i < toppings.length; i++){
-    if (toppings[i].checked === true) {
-      selectedToppings.push(toppings[i].value);
-      return 
-    }
-    
-  }
   
 
   //toppings.forEach((topping) => {
