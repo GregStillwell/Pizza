@@ -5,7 +5,12 @@ function pizza(pizzaToppings, pizzaSize) {
   this.price = 0
 }
 
-pizza.prototype.getPrice()	{
+pizza.prototype.getPrice = function   {
+  const sizePrice = {
+small:  {name: "small" ,Price: $10 },
+medium: {name: "medium" , price: $14},
+Large:  {name: "Large" , price: $17}
+  }
   // based off of the the amount of toppings
   // added to the size price
   // this.price
