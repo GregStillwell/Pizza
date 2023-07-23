@@ -25,7 +25,7 @@ You make your own pizza and you get  the price of your pizza
 Describe: Pizza()
 
 Test: "It should return a Pizza object with two properties for toppings and size"
-Code: const myPizza = new Pizza(["Sausage",pepperoni"], "medium");
+Code: const myPizza = new pizza(["Sausage",pepperoni"], "medium");
 Expected Output: Pizza { toppings: ["Sausage", "pepperoni"], size: "medium" }
 
 Test: "it should have a price for every size"
