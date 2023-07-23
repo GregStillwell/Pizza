@@ -5,11 +5,11 @@ function pizza(pizzaToppings, pizzaSize) {
   this.price = 0
 }
 
-pizza.prototype.getPrice = function   {
+pizza.prototype.getPrice = function()  {
   const sizePrice = {
 small:  {name: "small" ,Price: $10 },
 medium: {name: "medium" , price: $14},
-Large:  {name: "Large" , price: $17}
+Large:  {name: "Large" , price: $18}
   }
   // based off of the the amount of toppings
   // added to the size price
@@ -34,6 +34,7 @@ function handleFormSubmit(e) {
   let selectedToppings = [];
   // look at form see which checkboxes are checked
   const toppings = document.getElementsByName("toppings") //array of the HTML elements that have the name toppping
+  
 
   // put those into a new array
   //toppings.forEach(function ())
@@ -41,14 +42,17 @@ function handleFormSubmit(e) {
   for (let i = 0; i < toppings.length; i++){
     if (toppings[i].checked === true) {
       selectedToppings.push(toppings[i].value);
+      return 
     }
+    
   }
+  
 
-  toppings.forEach((topping) => {
-    if (topping.checked === true) {
-      selectedToppings.push(topping.value);
-    }
-  })
+  //toppings.forEach((topping) => {
+   // if (topping.checked === true) {
+   //   selectedToppings.push(topping.value);
+  //  }
+ // })
 
   
   const userPizza = new pizza(selectedToppings, 'large');
