@@ -9,10 +9,10 @@ Greg Stillwell
 - js
 
 ### Description
-
+You make your own pizza and you get  the price of your pizza 
 
 ### Setup/Installation Requirements
-- clone this repository: `$ git clone \`
+- clone this repository: `$ git clone \`https://github.com/GregStillwell/Pizza
 - open `index.html` in a web browser.
 - right click and click on 'open with live server'
 - make your pizza
@@ -28,7 +28,10 @@ Test: "It should return a Pizza object with two properties for toppings and size
 Code: const myPizza = new Pizza(["Sausage",pepperoni"], "medium");
 Expected Output: Pizza { toppings: ["Sausage", "pepperoni"], size: "medium" }
 
-Test:
+Test: "it should have a price for every size"
+Code: const mypizza = new pizza([], "medium"); mypizza.getPrice()
+Expected Output : 18
+
 
 ### License
 
